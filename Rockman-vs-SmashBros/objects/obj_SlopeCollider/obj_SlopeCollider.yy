@@ -2,7 +2,7 @@
     "id": "4f0c7779-652e-4761-b371-198be7b40723",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_SlopeCollision",
+    "name": "obj_SlopeCollider",
     "eventList": [
         
     ],

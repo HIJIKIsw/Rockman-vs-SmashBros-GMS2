@@ -82,7 +82,7 @@
             "Key": "1ce98ced-6da4-4d24-b7f3-245aaca30213",
             "Value": {
                 "id": "4efad97b-14ae-4b0f-9c9a-60b2a5c30b89",
-                "resourcePath": "objects\\obj_Terrain\\obj_Terrain.yy",
+                "resourcePath": "objects\\obj_TerrainCollider\\obj_TerrainCollider.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -154,7 +154,7 @@
             "Key": "4831253a-e12d-4d33-b902-067d3cbec161",
             "Value": {
                 "id": "0c3cf4e4-8b5c-468c-93e3-7487cdf2ec97",
-                "resourcePath": "objects\\obj_WallCollision\\obj_WallCollision.yy",
+                "resourcePath": "objects\\obj_WallCollider\\obj_WallCollider.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -162,7 +162,7 @@
             "Key": "4f0c7779-652e-4761-b371-198be7b40723",
             "Value": {
                 "id": "842fb501-0861-44c7-893b-bb019982396d",
-                "resourcePath": "objects\\obj_SlopeCollision\\obj_SlopeCollision.yy",
+                "resourcePath": "objects\\obj_SlopeCollider\\obj_SlopeCollider.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "6dfcf4dd-0068-47ce-88e7-2336d4e53ecd",
+            "Value": {
+                "id": "90d67b74-9043-4303-a815-75df6962f8ee",
+                "resourcePath": "views\\6dfcf4dd-0068-47ce-88e7-2336d4e53ecd.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "721acc52-b780-440c-bfc8-8212b1494cfd",
             "Value": {
                 "id": "552d4d4a-18b1-4ef4-ab95-ecfcb7cc2bf7",
@@ -276,6 +284,14 @@
                 "id": "59214a20-b42c-4077-ad01-3a116c332226",
                 "resourcePath": "views\\908887db-199b-4981-9f11-0cfd7807dad3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "93e8de88-713c-4a8d-b346-55cbcfc5be0f",
+            "Value": {
+                "id": "237c86ac-344a-4f09-8168-250921cf8e41",
+                "resourcePath": "sprites\\spr_System\\spr_System.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -452,6 +468,14 @@
                 "id": "18de3a5c-2cbc-49ee-a607-9912ac0d4d7f",
                 "resourcePath": "views\\df4958f3-c0a2-4735-ba2c-86b70fff3f30.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e3c2cd31-b0f6-45e3-b6d1-ff57103a1396",
+            "Value": {
+                "id": "3235fb20-65b7-4cf5-9068-ceb06b4cda40",
+                "resourcePath": "sprites\\spr_Camera\\spr_Camera.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

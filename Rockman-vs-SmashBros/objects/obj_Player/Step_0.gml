@@ -9,12 +9,12 @@
 	var JumpKey = Controller.IsButtonPressed[Buttons.A];
 
 	var Move = RightKey - LeftKey;
-	MoveDistanceX = Move*WalkSpeed;
+	MoveX = Move*WalkSpeed;
 
 	// ジャンプ
 	if( !IsInAir && JumpKey )
 	{
-		MoveDistanceY = JumpSpeed;
+		MoveY = JumpSpeed;
 	}
 
 	// 親のイベントを呼ぶ

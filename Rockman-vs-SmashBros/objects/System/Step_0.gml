@@ -2,6 +2,11 @@
 /// @desc System.Step
 ///-----------------------------------------------------------------------------
 
+	if( keyboard_check_pressed(ord("R")) )
+	{
+		room_restart();
+	}
+
 	// Debug Toggle
 	if( Controller.IsButtonPressed[Buttons.Select] )
 	{

@@ -5,41 +5,66 @@
 	// 重力を付加
 	if( IsInAir && !IsIgnoreGravity )
 	{
-		MoveDistanceY += Gravity;
+		MoveY += Gravity;
 	}
 
 	// X 方向の移動量を反映
-	if( place_meeting(x+MoveDistanceX, y, obj_Terrain) && !IsNoclip )
+	if( place_meeting(x+MoveX, y, obj_TerrainCollider) && !IsNoclip )
 	{
-		while (!place_meeting(x+sign(MoveDistanceX), y, obj_Terrain))
+		// スロープを登る
+		if( place_meeting(x+MoveX, y, obj_SlopeCollider) && !place_meeting(x+MoveX, y-abs(MoveX), obj_SlopeCollider) )
 		{
-			x += sign(MoveDistanceX);
+			while( place_meeting(x+MoveX, y, obj_SlopeCollider) )
+			{
+				y--;
+			}
+			x += MoveX;
 		}
-		MoveDistanceX = 0;
+		else
+		{
+			// 地形に接触する場合はギリギリの位置まで移動
+			while (!place_meeting(x+sign(MoveX), y, obj_TerrainCollider))
+			{
+				x += sign(MoveX);
+			}
+		}
+
+
+		// めり込み防止
+		if( MoveX < 0.0 )
+		{
+			x = ceil(x);
+		}
+		else if( MoveX > 0.0 )
+		{
+			x = floor(x);
+		}
+		MoveX = 0;
 	}
-	x += MoveDistanceX;
+	x += MoveX;
 
 	// Y 方向の移動量を反映
-	if( place_meeting(x, y+MoveDistanceY, obj_Terrain) && !IsNoclip )
+	if( place_meeting(x, y+MoveY, obj_TerrainCollider) && !IsNoclip )
 	{
-		while( !place_meeting(x, y+sign(MoveDistanceY), obj_Terrain) )
+		while( !place_meeting(x, y+sign(MoveY), obj_TerrainCollider) )
 		{
-			y += sign(MoveDistanceY);
+			y += sign(MoveY);
 		}
-		if( MoveDistanceY < 0.0 )
+		// めり込み防止
+		if( MoveY < 0.0 )
 		{
 			y = ceil(y);
 		}
-		else if( MoveDistanceY > 0.0 )
+		else if( MoveY > 0.0 )
 		{
 			y = floor(y);
 		}
-		MoveDistanceY = 0
+		MoveY = 0
 	}
-	y += MoveDistanceY;
+	y += MoveY;
 
 	// 接地判定
-	if( place_meeting(x, y+1, obj_Terrain) )
+	if( place_meeting(x, y+1, obj_TerrainCollider) )
 	{
 		IsInAir = false
 	}
